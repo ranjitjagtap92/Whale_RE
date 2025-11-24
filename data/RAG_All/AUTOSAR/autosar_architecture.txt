@@ -1,0 +1,181 @@
+AUTOSAR - Automotive Open System Architecture
+
+1. INTRODUCTION
+
+AUTOSAR is a worldwide development partnership of automotive manufacturers, suppliers, and tool developers. It provides a standardized software architecture for automotive ECUs.
+
+2. AUTOSAR LAYERED ARCHITECTURE
+
+2.1 Application Layer
+- Software Components (SWCs)
+- AUTOSAR Runtime Environment (RTE)
+
+2.2 Runtime Environment (RTE)
+- Virtual Function Bus (VFB) abstraction
+- Inter-ECU and intra-ECU communication
+- Service interfaces
+
+2.3 Basic Software (BSW)
+- Services Layer
+- ECU Abstraction Layer
+- Microcontroller Abstraction Layer
+
+2.4 Microcontroller
+- Hardware-specific implementation
+
+3. SOFTWARE COMPONENTS
+
+3.1 Component Types
+- Application SWC: Application logic
+- Sensor/Actuator SWC: Hardware interaction
+- Service SWC: Common services
+- Complex Device Driver (CDD): Direct hardware access
+
+3.2 Component Interfaces
+- Sender-Receiver: Data exchange
+- Client-Server: Service invocation
+- Mode Switch: Operating mode changes
+- Parameter: Configuration data
+- NVRAM: Non-volatile memory
+
+4. COMMUNICATION
+
+4.1 Communication Stack
+- CAN/LIN/FlexRay drivers
+- CAN Transport Protocol (CanTp)
+- Communication Manager (ComM)
+- PDU Router (PduR)
+- Diagnostic Communication Manager (DCM)
+
+4.2 Network Management
+- Bus state management
+- Sleep/wake-up coordination
+- Network monitoring
+
+5. AUTOSAR REQUIREMENTS PATTERNS
+
+5.1 Communication Requirements
+- "SWC_A shall send signal Speed_Value to SWC_B via RTE"
+- "The system shall support CAN communication at 500 kbps"
+- "Inter-ECU communication shall use secured PDUs"
+
+5.2 Memory Requirements
+- "Configuration data shall be stored in NVM"
+- "Calibration parameters shall be accessible via XCP"
+- "Memory partitioning shall prevent cross-access between components"
+
+5.3 Diagnostic Requirements
+- "ECU shall support UDS protocol (ISO 14229)"
+- "DTC shall be stored persistently across power cycles"
+- "Diagnostic services shall be accessible in all operating modes"
+
+6. FUNCTIONAL SAFETY IN AUTOSAR
+
+6.1 Safety Mechanisms
+- End-to-End (E2E) Protection: CRC, sequence counter, timeout
+- Alive Supervision: Watchdog monitoring
+- Logical Supervision: State machine checks
+- Program Flow Monitoring: Execution order verification
+
+6.2 Safety Requirements Examples
+- "E2E protection shall be applied to all ASIL C and higher signals"
+- "Safety SWC shall monitor application SWC execution timing"
+- "Safety-critical data shall use redundant storage with voting"
+
+7. TIMING REQUIREMENTS
+
+7.1 Task Scheduling
+- "Task T1 shall execute every 10ms with deadline of 5ms"
+- "Task T2 shall have higher priority than Task T3"
+- "Runnable R1 shall complete execution within 2ms"
+
+7.2 Communication Timing
+- "CAN message M1 shall be transmitted every 100ms"
+- "Signal S1 shall propagate from sender to receiver within 20ms"
+- "Mode switch shall complete within 50ms"
+
+8. RESOURCE MANAGEMENT
+
+8.1 Memory Requirements
+- "RAM usage shall not exceed 64KB"
+- "ROM usage shall not exceed 512KB"
+- "Stack usage per task shall not exceed 2KB"
+
+8.2 CPU Requirements
+- "CPU utilization shall not exceed 80% under normal load"
+- "Safety tasks shall have guaranteed execution time"
+- "Idle time shall be at least 10% for background tasks"
+
+9. MODE MANAGEMENT
+
+Mode management requirements:
+- "ECU shall support Normal, Sleep, and Diagnostic modes"
+- "Transition from Normal to Sleep shall complete within 500ms"
+- "Wake-up from Sleep shall complete initialization within 2 seconds"
+- "Diagnostic mode shall disable non-essential functions"
+
+10. DIAGNOSTIC REQUIREMENTS
+
+10.1 DTC Management
+- "System shall log DTC when fault condition persists for 500ms"
+- "DTC shall include freeze frame data (timestamp, operating conditions)"
+- "Maximum 100 DTCs shall be stored in non-volatile memory"
+
+10.2 Diagnostic Services
+- "ECU shall support diagnostic session control (UDS 0x10)"
+- "ECU shall support routine control for actuator tests (UDS 0x31)"
+- "ECU shall support read/write memory operations in development mode"
+
+11. CONFIGURATION MANAGEMENT
+
+11.1 Pre-Compile Configuration
+- Fixed at compile time
+- Optimized for performance
+- Cannot be changed after compilation
+
+11.2 Post-Build Configuration
+- Loaded at runtime
+- Allows ECU variant management
+- Stored in calibration memory
+
+11.3 Configuration Requirements
+- "ECU shall support 3 hardware variants via post-build configuration"
+- "Configuration data shall be validated on startup"
+- "Invalid configuration shall prevent ECU from entering operational mode"
+
+12. AUTOSAR ADAPTIVE PLATFORM
+
+12.1 Service-Oriented Architecture
+- Service Discovery
+- Publish-Subscribe communication
+- Event-driven design
+
+12.2 Adaptive Requirements
+- "Service S1 shall be discoverable via SOME/IP-SD"
+- "Adaptive application shall support dynamic service binding"
+- "Platform shall support over-the-air (OTA) software updates"
+
+13. REQUIREMENT VERIFICATION
+
+Verification methods for AUTOSAR:
+- Static Analysis: MISRA compliance, architecture validation
+- Integration Testing: Component interaction verification
+- HIL Testing: Real-time behavior validation
+- Diagnostic Testing: UDS service verification
+
+14. COMMON AUTOSAR REQUIREMENT PATTERNS
+
+Pattern 1: Port Interface
+"SWC_A shall provide port P1 implementing interface I1 with operation Op1"
+
+Pattern 2: Timing Constraint
+"Runnable R1 shall execute with period T and worst-case execution time WCET"
+
+Pattern 3: Resource Consumption
+"SWC_A shall use no more than X KB RAM and Y KB ROM"
+
+Pattern 4: Error Handling
+"On detection of error E1, SWC_A shall invoke DEM to report DTC_XXX"
+
+Pattern 5: Calibration
+"Parameter P1 shall be calibratable via XCP protocol"

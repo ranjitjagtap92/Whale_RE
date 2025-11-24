@@ -1,0 +1,17 @@
+streamlit
+crewai
+langchain
+openai
+python-dotenv
+pandas
+matplotlib
+plotly
+streamlit-plotly-events
+langchain-openai
+openpyxl
+python-docx
+fpdf
+pillow
+zipfile36
+PyPDF2
+streamlit-authenticator

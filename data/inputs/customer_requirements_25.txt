@@ -1,0 +1,49 @@
+CUST_REQ-001: Maintain desired speed automatically
+
+CUST_REQ-002: Automatically disengage cruise control on brake pedal press
+
+CUST_REQ-003: Limit maximum speed to 120 km/h in urban areas
+
+CUST_REQ-004: Warn driver when vehicle deviates from lane without indicator
+
+CUST_REQ-005: Detect obstacles and apply automatic braking if collision imminent
+
+CUST_REQ-006: Allow driver to set preferred following distance from vehicle ahead
+
+CUST_REQ-007: Resume previously set speed after temporary braking
+
+CUST_REQ-008: Provide audible and visual alert if driver’s hands are off steering wheel for more than 10 seconds
+
+CUST_REQ-009: Reduce speed automatically in school zones when detected by navigation data
+
+CUST_REQ-010: Adjust headlamp beam automatically depending on traffic conditions
+
+CUST_REQ-011: Detect driver drowsiness and provide timely warning
+
+CUST_REQ-012: Provide emergency call functionality in case of severe collision
+
+CUST_REQ-013: Allow manual override of all automatic functions by driver at any time
+
+CUST_REQ-014: Automatically keep vehicle centered in lane during highway driving
+
+CUST_REQ-015: Adjust vehicle speed according to road curvature for enhanced safety
+
+CUST_REQ-016: Alert driver if speed limit is exceeded for more than 30 seconds
+
+CUST_REQ-017: Provide adaptive cruise control in stop-and-go traffic conditions
+
+CUST_REQ-018: Detect pedestrians and cyclists and trigger warning or braking if required
+
+CUST_REQ-019: Warn driver of blind spot occupation when changing lanes
+
+CUST_REQ-020: Notify driver when vehicle ahead starts moving in traffic jams
+
+CUST_REQ-021: Maintain stable performance in varying weather conditions (rain, fog, snow)
+
+CUST_REQ-022: Ensure system availability with minimal driver input at vehicle startup
+
+CUST_REQ-023: Store driver preferences (speed, distance, alerts) across driving sessions
+
+CUST_REQ-024: Provide driver with estimated fuel efficiency impact of cruise control usage
+
+CUST_REQ-025: Warn driver when system sensors are obstructed or malfunctioning

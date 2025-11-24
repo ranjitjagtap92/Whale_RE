@@ -1,0 +1,19 @@
+# Vector RAG Dependencies for WHALE-RE
+# Install with: pip install -r requirements_rag_vector.txt
+
+# Core vector database options (install at least one)
+chromadb>=0.4.22           # Recommended: Easy to use, persistent storage
+# faiss-cpu>=1.7.4         # Alternative: High performance (uncomment for CPU version)
+# faiss-gpu>=1.7.4         # Alternative: GPU-accelerated (uncomment if CUDA available)
+
+# Embeddings (required for vector RAG)
+sentence-transformers>=2.2.2    # State-of-the-art text embeddings
+
+# PDF extraction (required for loading PDF standards)
+pdfplumber>=0.10.0        # Recommended: Best quality PDF text extraction
+PyPDF2>=3.0.0             # Fallback: Simpler PDF extraction
+
+# Additional dependencies (usually auto-installed)
+torch>=2.0.0              # PyTorch for embeddings
+numpy>=1.24.0             # Numerical operations
+transformers>=4.30.0      # HuggingFace transformers

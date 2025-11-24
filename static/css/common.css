@@ -1,0 +1,57 @@
+/* MAPS Assistant Floating Button */
+.floating-help-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.floating-help-button:hover {
+    transform: scale(1.1);
+    background-color: #0056b3;
+}
+
+/* MAPS Assistant Modal */
+.maps-assistant-modal .modal-dialog {
+    max-width: 600px;
+}
+
+.maps-assistant-modal .modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.maps-assistant-modal .modal-title {
+    color: #007bff;
+    font-weight: 600;
+}
+
+.maps-assistant-modal .modal-body {
+    padding: 20px;
+}
+
+.maps-assistant-modal .modal-body ul {
+    padding-left: 20px;
+}
+
+.maps-assistant-modal .modal-body li {
+    margin-bottom: 10px;
+}
+
+.maps-assistant-modal .modal-footer {
+    border-top: 2px solid #dee2e6;
+    padding: 15px;
+} 

@@ -1,0 +1,10 @@
+CUST_REQ-001: Maintain desired speed automatically
+CUST_REQ-002: Automatically disengage cruise control on brake pedal press
+CUST_REQ-003: Limit maximum speed to 120 km/h in urban areas
+CUST_REQ-004: Warn driver when vehicle deviates from lane without indicator
+CUST_REQ-005: Detect obstacles and apply automatic braking if collision imminent
+CUST_REQ-006: Allow driver to set preferred following distance from vehicle ahead
+CUST_REQ-007: Ensure infotainment system mutes audio when reversing
+CUST_REQ-008: Vehicle doors shall auto-lock above 15 km/h speed
+CUST_REQ-009: Climate control shall maintain cabin temperature within ±1°C of setpoint
+CUST_REQ-010: System shall provide driver alert after 2 hours of continuous driving

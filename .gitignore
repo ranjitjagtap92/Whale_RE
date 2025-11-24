@@ -1,0 +1,49 @@
+# Environment and secrets
+.env
+.streamlit/secrets.toml
+auth_config.yaml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Outputs and data
+data/outputs/*
+!data/outputs/.gitkeep
+pipeline_output.json
+
+# Database
+*.sqlite3
+*.db
+data/vector_store/
+
+# Backup
+Backup/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/

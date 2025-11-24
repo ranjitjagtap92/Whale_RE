@@ -1,0 +1,1 @@
+"""WHALE-RE core package."""

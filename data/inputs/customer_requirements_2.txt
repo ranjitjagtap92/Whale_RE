@@ -1,0 +1,2 @@
+CUST_REQ-001: Maintain desired speed automatically
+CUST_REQ-002: Automatically disengage cruise control on brake pedal press

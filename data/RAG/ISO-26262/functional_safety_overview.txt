@@ -1,0 +1,170 @@
+ISO 26262 - Functional Safety for Road Vehicles
+
+1. OVERVIEW
+
+ISO 26262 is the international standard for functional safety of electrical and electronic systems in production automobiles. It addresses possible hazards caused by malfunctioning behavior of safety-related E/E systems.
+
+2. ASIL - AUTOMOTIVE SAFETY INTEGRITY LEVEL
+
+ASIL represents the level of risk associated with a hazard. Four ASIL levels exist:
+- ASIL D: Highest integrity requirements (e.g., airbag control, brake-by-wire)
+- ASIL C: High integrity requirements (e.g., ABS, ESC)
+- ASIL B: Medium integrity requirements (e.g., brake lights)
+- ASIL A: Lowest integrity requirements (e.g., rear windshield wiper)
+- QM (Quality Management): No safety requirements
+
+ASIL determination considers:
+- Severity (S): Potential harm from hazard (S0-S3)
+- Exposure (E): Probability of operational situation (E0-E4)
+- Controllability (C): Ability to avoid harm (C0-C3)
+
+3. SAFETY LIFECYCLE
+
+3.1 Concept Phase
+- Hazard Analysis and Risk Assessment (HARA)
+- Functional Safety Concept
+- Safety Goals definition
+
+3.2 Product Development
+- Technical Safety Concept
+- System Design
+- Hardware Development
+- Software Development
+
+3.3 Production and Operation
+- Manufacturing
+- Operation and Maintenance
+- Decommissioning
+
+4. FUNCTIONAL SAFETY REQUIREMENTS
+
+4.1 Safety Goals
+High-level safety requirements derived from HARA:
+- "The vehicle shall prevent unintended acceleration" (ASIL D)
+- "The system shall detect and mitigate brake failures" (ASIL D)
+- "The vehicle shall maintain stability during emergency maneuvers" (ASIL C)
+
+4.2 Functional Safety Requirements (FSR)
+Derived from safety goals to describe safe behavior:
+- Detection requirements: "The system shall detect sensor faults within 100ms"
+- Mitigation requirements: "The system shall transition to safe state upon critical failure"
+- Warning requirements: "The system shall alert the driver of degraded functionality"
+
+4.3 Technical Safety Requirements (TSR)
+Implementation-level requirements:
+- Hardware safety requirements
+- Software safety requirements
+- Interface requirements between components
+
+5. SAFETY MECHANISMS
+
+Common safety mechanisms include:
+- Redundancy: Dual-channel systems with voting
+- Monitoring: Plausibility checks, range checks, temporal checks
+- Error Detection: CRC, parity, watchdog timers
+- Fault Tolerance: Graceful degradation, safe states
+- Diagnostic Coverage: Self-test routines, BIST
+
+6. VERIFICATION AND VALIDATION
+
+6.1 Verification Methods
+- Requirements review
+- Design review
+- Code inspection
+- Static analysis
+- Unit testing
+- Integration testing
+- System testing
+
+6.2 Validation Activities
+- Fault injection testing
+- Hardware-in-the-loop (HIL) testing
+- Vehicle-level testing
+- Field testing
+
+7. SAFETY CASE DOCUMENTATION
+
+Safety case demonstrates compliance:
+- Safety Plan
+- Safety Requirements Specification
+- Safety Analysis Reports
+- Verification and Validation Reports
+- Safety Assessment Report
+
+8. AUTOMOTIVE SAFETY REQUIREMENTS EXAMPLES
+
+8.1 Powertrain Safety
+- "The engine control system shall limit torque output to prevent wheel slip" (ASIL C)
+- "The fuel system shall shut off fuel supply in case of collision detection" (ASIL D)
+- "The transmission shall prevent unintended gear shifts" (ASIL C)
+
+8.2 Chassis Safety
+- "The brake system shall maintain stopping capability with single-point failures" (ASIL D)
+- "The steering system shall provide mechanical fallback in case of electrical failure" (ASIL D)
+- "The suspension system shall detect and report damper failures" (ASIL B)
+
+8.3 ADAS Safety
+- "The adaptive cruise control shall maintain safe following distance" (ASIL B)
+- "The lane keeping assist shall not cause unintended steering inputs" (ASIL C)
+- "The emergency braking system shall activate within 200ms of obstacle detection" (ASIL D)
+
+9. SOFTWARE REQUIREMENTS
+
+9.1 Software Safety Requirements
+- "Software shall perform input validation on all sensor data"
+- "Software shall implement memory protection mechanisms"
+- "Software shall use defensive programming practices"
+- "Software shall include runtime error detection"
+
+9.2 Software Architecture
+- Modular design with clear interfaces
+- Separation of safety-critical and non-critical functions
+- Freedom from interference between software components
+- Deterministic execution behavior
+
+10. HARDWARE REQUIREMENTS
+
+10.1 Hardware Safety Requirements
+- "Hardware shall implement ECC for memory protection"
+- "Hardware shall include independent safety processors for monitoring"
+- "Hardware shall detect voltage and temperature anomalies"
+- "Hardware shall meet random hardware failure metrics (PMHF targets)"
+
+10.2 Hardware Metrics
+- Single Point Fault Metric (SPFM)
+- Latent Fault Metric (LFM)
+- Probabilistic Metric for Hardware Failures (PMHF)
+
+11. SYSTEM INTEGRATION
+
+Integration requirements:
+- "Safety-critical systems shall communicate via redundant channels"
+- "System shall implement temporal and spatial partitioning"
+- "System shall prevent cascade failures across components"
+- "System shall coordinate safety mechanisms across ECUs"
+
+12. REQUIREMENT ATTRIBUTES FOR FUNCTIONAL SAFETY
+
+Each requirement should specify:
+- ASIL level
+- Safety mechanism allocation
+- Verification method (test, analysis, inspection)
+- Dependent requirements
+- Failure modes addressed
+- Diagnostic coverage target
+
+13. DECOMPOSITION
+
+ASIL decomposition allows distributing safety requirements:
+- ASIL D can decompose to ASIL C + ASIL C (with independence)
+- ASIL D can decompose to ASIL D + QM (with one sufficient safety element)
+- Decomposition requires justification and independence demonstration
+
+14. SAFETY PATTERNS
+
+Common safety patterns:
+- Dual-Core Lockstep: Two cores execute same code, compare results
+- Diverse Redundancy: Different implementations of same function
+- Watchdog Monitoring: External monitor checks system health
+- Safe State: Defined system state when faults detected
+- Limp-Home Mode: Degraded but safe operation mode

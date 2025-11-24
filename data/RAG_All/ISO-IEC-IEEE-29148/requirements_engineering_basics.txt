@@ -1,0 +1,136 @@
+ISO/IEC/IEEE 29148 - Requirements Engineering Standard
+
+1. INTRODUCTION TO REQUIREMENTS ENGINEERING
+
+Requirements engineering is the systematic approach to eliciting, documenting, validating, and managing requirements throughout the system lifecycle. This standard provides guidelines for best practices in requirements engineering processes.
+
+2. REQUIREMENT CHARACTERISTICS
+
+Good requirements should possess the following characteristics:
+- Clear and unambiguous: Each requirement shall have only one interpretation
+- Complete: The requirement describes the necessary functionality in full
+- Consistent: Requirements shall not contradict each other
+- Verifiable: It must be possible to verify that the requirement has been met
+- Traceable: Requirements shall be traced to source documents and design elements
+- Feasible: Requirements must be achievable within known constraints
+- Necessary: Each requirement shall address a stakeholder need
+
+3. REQUIREMENT TYPES
+
+3.1 Functional Requirements
+Functional requirements define what the system must do. They describe system behavior, inputs, outputs, and operations. Examples include:
+- "The system shall process user login requests within 2 seconds"
+- "The system shall validate input data against predefined rules"
+- "The system shall generate monthly reports in PDF format"
+
+3.2 Non-Functional Requirements
+Non-functional requirements specify system qualities and constraints:
+- Performance: Response time, throughput, resource usage
+- Reliability: Availability, mean time between failures
+- Safety: Hazard mitigation, fail-safe mechanisms
+- Security: Authentication, authorization, encryption
+- Usability: User interface design, accessibility
+- Maintainability: Code quality, documentation
+
+3.3 Interface Requirements
+Interface requirements define how the system interacts with external entities:
+- User interfaces
+- Hardware interfaces
+- Software interfaces
+- Communication protocols
+
+4. REQUIREMENT DOCUMENTATION
+
+4.1 Requirement Statements
+Each requirement statement shall follow a standard format:
+- Unique Identifier: REQ-XXX-NNN
+- Title: Brief descriptive name
+- Description: Complete requirement statement using "shall" for mandatory requirements
+- Rationale: Justification for the requirement
+- Priority: Critical, High, Medium, Low
+- Verification Method: Inspection, Analysis, Test, Demonstration
+
+4.2 Requirement Attributes
+Requirements should include metadata attributes:
+- Source: Originating stakeholder or document
+- Status: Proposed, Approved, Implemented, Verified
+- Owner: Responsible party
+- Dependencies: Related requirements
+- Acceptance Criteria: Conditions for requirement satisfaction
+
+5. REQUIREMENTS QUALITY ASSURANCE
+
+5.1 Requirements Review
+Requirements shall be reviewed for:
+- Correctness: Accurately reflects stakeholder needs
+- Completeness: No missing information
+- Consistency: No conflicts with other requirements
+- Clarity: Unambiguous and understandable
+- Testability: Can be verified through testing
+
+5.2 Requirements Validation
+Validation ensures requirements meet stakeholder needs:
+- Stakeholder review sessions
+- Prototyping and simulation
+- Requirements walkthroughs
+- Formal inspections
+
+6. REQUIREMENTS TRACEABILITY
+
+Traceability links requirements throughout the lifecycle:
+- Forward traceability: Requirements to design and test cases
+- Backward traceability: Requirements to source documents
+- Bidirectional traceability: Complete traceability chain
+
+Traceability Matrix should document:
+- Source requirement ID
+- Derived requirement ID
+- Design element ID
+- Test case ID
+- Verification status
+
+7. REQUIREMENTS CHANGE MANAGEMENT
+
+Change management ensures controlled requirement evolution:
+- Change request process
+- Impact analysis
+- Change approval workflow
+- Version control
+- Notification to affected parties
+
+8. BEST PRACTICES
+
+- Use consistent terminology and templates
+- Avoid ambiguous words (e.g., "user-friendly", "fast", "reliable")
+- Use active voice and imperative mood
+- Express requirements quantitatively when possible
+- Separate concerns (one requirement per statement)
+- Prioritize requirements based on stakeholder value
+- Maintain requirement traceability throughout lifecycle
+- Review requirements regularly with stakeholders
+
+9. COMMON PITFALLS TO AVOID
+
+- Combining multiple requirements in one statement
+- Using vague or subjective language
+- Including implementation details in requirements
+- Omitting acceptance criteria
+- Neglecting non-functional requirements
+- Poor requirement organization and structure
+- Insufficient stakeholder involvement
+
+10. AUTOMOTIVE-SPECIFIC CONSIDERATIONS
+
+For automotive systems, requirements must address:
+- Functional safety (ISO 26262)
+- Security (ISO 21434)
+- Real-time constraints
+- Environmental conditions (temperature, vibration, EMI)
+- Regulatory compliance (ECE regulations)
+- Lifecycle support and maintenance
+
+Requirements should be allocated to appropriate ASIL levels and include:
+- Safety goals
+- Functional safety requirements
+- Technical safety requirements
+- Hardware/software safety requirements

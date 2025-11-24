@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REQ-IF xmlns="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd">
+  <THE-HEADER>
+    <REQ-IF-HEADER>
+      <IDENTIFIER>reqif_header_001</IDENTIFIER>
+      <CREATION-TIME>2025-01-01T12:00:00Z</CREATION-TIME>
+      <TITLE>Customer Requirements</TITLE>
+    </REQ-IF-HEADER>
+  </THE-HEADER>
+
+  <CORE-CONTENT>
+    <REQ-IF-CONTENT>
+
+      <SPEC-TYPES>
+        <SPEC-OBJECT-TYPE IDENTIFIER="CustomerRequirementType">
+          <LONG-NAME>Customer Requirement</LONG-NAME>
+          <SPEC-ATTRIBUTES>
+            <ATTRIBUTE-DEFINITION-XHTML IDENTIFIER="ReqText" LONG-NAME="Requirement Text"/>
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="ReqID" LONG-NAME="Requirement ID"/>
+          </SPEC-ATTRIBUTES>
+        </SPEC-OBJECT-TYPE>
+      </SPEC-TYPES>
+
+      <SPEC-OBJECTS>
+
+        <SPEC-OBJECT IDENTIFIER="SO_CUST_REQ_001" TYPE="CustomerRequirementType">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-ATTRIBUTE="ReqID">
+              <THE-VALUE>CUST_REQ-001</THE-VALUE>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML THE-ATTRIBUTE="ReqText">
+              <THE-VALUE>Maintain desired speed automatically</THE-VALUE>
+            </ATTRIBUTE-VALUE-XHTML>
+          </VALUES>
+        </SPEC-OBJECT>
+
+        <SPEC-OBJECT IDENTIFIER="SO_CUST_REQ_002" TYPE="CustomerRequirementType">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-ATTRIBUTE="ReqID">
+              <THE-VALUE>CUST_REQ-002</THE-VALUE>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML THE-ATTRIBUTE="ReqText">
+              <THE-VALUE>Automatically disengage cruise control on brake pedal press</THE-VALUE>
+            </ATTRIBUTE-VALUE-XHTML>
+          </VALUES>
+        </SPEC-OBJECT>
+
+      </SPEC-OBJECTS>
+
+      <SPEC-HIERARCHIES>
+        <SPEC-HIERARCHY IDENTIFIER="HierarchyRoot">
+          <CHILDREN>
+            <SPEC-HIERARCHY IDENTIFIER="H_CUST_REQ_001" OBJECT="SO_CUST_REQ_001"/>
+            <SPEC-HIERARCHY IDENTIFIER="H_CUST_REQ_002" OBJECT="SO_CUST_REQ_002"/>
+          </CHILDREN>
+        </SPEC-HIERARCHY>
+      </SPEC-HIERARCHIES>
+
+    </REQ-IF-CONTENT>
+  </CORE-CONTENT>
+
+</REQ-IF>
